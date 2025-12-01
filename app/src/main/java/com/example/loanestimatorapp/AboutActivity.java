@@ -1,7 +1,7 @@
 package com.example.loanestimatorapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.appbar.MaterialToolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
@@ -17,18 +17,17 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        // Setup Toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar_about);
+        // Setup MaterialToolbar
+        MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
 
-        // Optional: enable back arrow
+        // Enable back arrow
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Make GitHub URL clickable
         TextView github = findViewById(R.id.txtGit);
         github.setMovementMethod(LinkMovementMethod.getInstance());
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
